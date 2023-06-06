@@ -1,21 +1,20 @@
 /*
-See LICENSE folder for this sample’s licensing information.
+ See LICENSE folder for this sample’s licensing information.
 
-Abstract:
-The toolbar for the Quakes view.
-*/
+ Abstract:
+ The toolbar for the Quakes view.
+ */
 
 import SwiftUI
 
 extension Quakes {
-
     @ToolbarContentBuilder
     func toolbarContent() -> some ToolbarContent {
         ToolbarItem(placement: .navigationBarLeading) {
             if editMode == .active {
                 SelectButton(mode: $selectMode) {
                     if selectMode.isActive {
-                        selection = Set(quakes.map { $0.code })
+                        selection = Set(provider.quakes.map { $0.code })
                     } else {
                         selection = []
                     }
@@ -32,14 +31,14 @@ extension Quakes {
         ToolbarItemGroup(placement: .bottomBar) {
             RefreshButton {
                 Task {
-                    fetchQuakes()
+                    await fetchQuakes()
                 }
             }
             Spacer()
             ToolbarStatus(
                 isLoading: isLoading,
                 lastUpdated: lastUpdated,
-                quakesCount: quakes.count
+                quakesCount: provider.quakes.count
             )
             Spacer()
             if editMode == .active {
