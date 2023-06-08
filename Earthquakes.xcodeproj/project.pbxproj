@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 53;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,8 @@
 		714B5A742A2FE446001F2DA0 /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FC31B12A2F9E97007E29EB /* TestData.swift */; };
 		714B5A762A2FE488001F2DA0 /* TestDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714B5A752A2FE488001F2DA0 /* TestDownloader.swift */; };
 		714B5A782A2FE578001F2DA0 /* QuakesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714B5A772A2FE578001F2DA0 /* QuakesProvider.swift */; };
+		714B5A7A2A3124C0001F2DA0 /* CacheEntryObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714B5A792A3124C0001F2DA0 /* CacheEntryObject.swift */; };
+		714B5A7C2A312587001F2DA0 /* NSCache+Subscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714B5A7B2A312587001F2DA0 /* NSCache+Subscript.swift */; };
 		71FC31A32A2F9D0E007E29EB /* QuakeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FC31A22A2F9D0E007E29EB /* QuakeError.swift */; };
 		71FC31AB2A2F9DC2007E29EB /* EarthquakesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FC31AA2A2F9DC2007E29EB /* EarthquakesTests.swift */; };
 		71FC31B52A2FA189007E29EB /* GeoJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FC31B32A2FA17C007E29EB /* GeoJSON.swift */; };
@@ -50,6 +52,8 @@
 		714B5A722A2FE042001F2DA0 /* QuakeClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuakeClient.swift; sourceTree = "<group>"; };
 		714B5A752A2FE488001F2DA0 /* TestDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDownloader.swift; sourceTree = "<group>"; };
 		714B5A772A2FE578001F2DA0 /* QuakesProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuakesProvider.swift; sourceTree = "<group>"; };
+		714B5A792A3124C0001F2DA0 /* CacheEntryObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheEntryObject.swift; sourceTree = "<group>"; };
+		714B5A7B2A312587001F2DA0 /* NSCache+Subscript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSCache+Subscript.swift"; sourceTree = "<group>"; };
 		71FC31A22A2F9D0E007E29EB /* QuakeError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuakeError.swift; sourceTree = "<group>"; };
 		71FC31A82A2F9DC2007E29EB /* EarthquakesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EarthquakesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		71FC31AA2A2F9DC2007E29EB /* EarthquakesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthquakesTests.swift; sourceTree = "<group>"; };
@@ -178,6 +182,8 @@
 				714B5A702A2FDF3F001F2DA0 /* HTTPDataDownloader.swift */,
 				714B5A722A2FE042001F2DA0 /* QuakeClient.swift */,
 				714B5A772A2FE578001F2DA0 /* QuakesProvider.swift */,
+				714B5A792A3124C0001F2DA0 /* CacheEntryObject.swift */,
+				714B5A7B2A312587001F2DA0 /* NSCache+Subscript.swift */,
 			);
 			name = Models;
 			path = Earthquakes/Models;
@@ -247,9 +253,10 @@
 		AD43F1DA26158A630068AABC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				DefaultBuildSystemTypeForWorkspace = Latest;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1300;
+				LastUpgradeCheck = 1430;
 				ORGANIZATIONNAME = Apple;
 				TargetAttributes = {
 					71FC31A72A2F9DC2007E29EB = {
@@ -319,6 +326,7 @@
 				ADDDB1812625242200241A73 /* QuakeRow.swift in Sources */,
 				7CC62565273C2A9200F87758 /* Quake+Color.swift in Sources */,
 				AD43F1E626158A640068AABC /* EarthquakesApp.swift in Sources */,
+				714B5A7A2A3124C0001F2DA0 /* CacheEntryObject.swift in Sources */,
 				AA988DDB27E9028A004EA073 /* ToolbarStatus.swift in Sources */,
 				714B5A782A2FE578001F2DA0 /* QuakesProvider.swift in Sources */,
 				AA988DD327E900B6004EA073 /* Quakes+Toolbar.swift in Sources */,
@@ -332,6 +340,7 @@
 				AD57B10226561FE1005183D0 /* Quakes.swift in Sources */,
 				714B5A762A2FE488001F2DA0 /* TestDownloader.swift in Sources */,
 				AD43F1FA26158CD50068AABC /* Quake.swift in Sources */,
+				714B5A7C2A312587001F2DA0 /* NSCache+Subscript.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
